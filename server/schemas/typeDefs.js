@@ -10,7 +10,7 @@ const typeDefs = gql`
   }
 
   type Book {
-    BookId: ID
+    bookId: ID
     authors: [String]
     description: String
     title: String
@@ -18,15 +18,16 @@ const typeDefs = gql`
     link: String
   }
 
-  type Author {
-      _id: ID
-      name: String
+  type Auth {
+      token: ID
+      user: User
   }
 
   type Query {
     me: User
     users: [User]
     user(username: String!): User
+    books: [Book]
   }
 
   type Mutation {
