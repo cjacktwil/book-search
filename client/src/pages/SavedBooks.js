@@ -14,6 +14,8 @@ const SavedBooks = () => {
 
   //declare userData variable
   const userData = data?.me || {};
+  console.log(userData);
+
 
   const handleDeleteBook = async (bookId) => {
     //check for token for user info
@@ -38,6 +40,7 @@ const SavedBooks = () => {
     }
   };
   if (loading) return 'Loading...';
+
 
   return (
     <>
